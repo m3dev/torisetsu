@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    background-size: auto auto;
+    background-image: repeating-linear-gradient(-45deg, rgb(12, 31, 204), rgb(12, 31, 204) 10px, rgba(10, 0, 146, 1) 10px, rgba(10, 0, 146, 1) 12px);
+    min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
