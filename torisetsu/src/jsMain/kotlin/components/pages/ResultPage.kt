@@ -71,6 +71,7 @@ fun resultPage(onClickBack: () -> Unit) {
                                 attrs = {
                                     style {
                                         whiteSpace("pre-line")
+                                        fontSize(18.px)
                                     }
                                 }
                             ) {
@@ -106,7 +107,7 @@ fun resultPage(onClickBack: () -> Unit) {
                         display(DisplayStyle.Flex)
                         flexDirection(FlexDirection.Column)
                         alignItems(AlignItems.Center)
-                        gap(12.px)
+                        gap(20.px)
                     }
                 }
 
@@ -114,7 +115,7 @@ fun resultPage(onClickBack: () -> Unit) {
                 H2(
                     attrs = {
                         style {
-                            fontSize(20.px)
+                            fontSize(24.px)
                             fontWeight(700)
                             textAlign("center")
                             color(Color.white)

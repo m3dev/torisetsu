@@ -22,7 +22,7 @@ fun button(
                     ButtonSize.NORMAL -> {
                         padding(16.px, 36.px)
                         borderRadius(16.px)
-                        fontSize(18.px)
+                        fontSize(32.px)
                     }
 
                     ButtonSize.LARGE -> {
