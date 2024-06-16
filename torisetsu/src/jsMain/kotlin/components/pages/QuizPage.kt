@@ -1,22 +1,19 @@
 package components.pages
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.setValue
 import components.base.card
 import components.base.pageLayout
+import core.Quiz
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 
-val answerOptions = listOf(
-    "ほとんど触らない",
-    "100回以下",
-    "100回以上"
-)
-
 @Composable
 fun quizPage(
-    onClickFinish: () -> Unit,
+    quiz: Quiz,
+    onClickFinish: (nextId: Int) -> Unit,
 ) {
     pageLayout {
         Div(
@@ -39,7 +36,7 @@ fun quizPage(
                     }
                 }
             ) {
-                Text("1/10")
+                Text("${quiz.currentQuizNumber.value}問目")
             }
             Div(
                 attrs = {
@@ -50,7 +47,7 @@ fun quizPage(
                     }
                 }
             ) {
-                Text("X（旧Twitter）を一日どのくらい触っている?")
+                Text(quiz.getQuestionText())
             }
         }
         Div(
@@ -64,11 +61,12 @@ fun quizPage(
                 }
             }
         ) {
-            answerOptions.map {
+            quiz.getAnswerOptions().map { opt ->
                 Button(
                     attrs = {
-                        // TODO: 次の問題へ進むように
-                        onClick { onClickFinish() }
+                        onClick {
+                            quiz.onClickNext(opt, onClickFinish)
+                        }
                     },
                 ) {
                     card {
@@ -82,7 +80,7 @@ fun quizPage(
                                 }
                             }
                         ) {
-                            Text(it)
+                            Text(opt.text)
                         }
                     }
                 }
