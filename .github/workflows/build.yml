@@ -1,5 +1,4 @@
-on:
-  push
+on: [push, pull_request]
 
 jobs:
   build:
@@ -8,7 +7,7 @@ jobs:
       run:
         working-directory: torisetsu
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
@@ -19,14 +18,11 @@ jobs:
       - name: build
         run: |
           ./gradlew build
-
-      - uses: actions/checkout@v4
       - name: Check file existence
         id: check_files
-        working-directory: torisetsu/build/dist/js/productionExecutable
         uses: andstor/file-existence-action@v3
         with:
-          files: "index.html, torisetsu.js"
+          files: "torisetsu/build/dist/js/productionExecutable/index.html"
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
         run: echo All files exists!
