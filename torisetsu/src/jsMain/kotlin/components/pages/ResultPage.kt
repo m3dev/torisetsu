@@ -2,13 +2,14 @@ package components.pages
 
 import androidx.compose.runtime.Composable
 import components.base.*
+import data.Diagnosis
 import org.jetbrains.compose.web.attributes.ATarget
 import org.jetbrains.compose.web.attributes.target
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun resultPage(onClickBack: () -> Unit) {
+fun resultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
     pageLayout {
         Div(
             attrs = {
@@ -44,12 +45,12 @@ fun resultPage(onClickBack: () -> Unit) {
                                 }
                             ) {
                                 Text(
-                                    "あなたのトリタイプ：",
+                                    "あなたのトリタイプ",
                                 )
                             }
                         }
                         Img(
-                            src = "./images/penguin.png",
+                            src = diagnosis.srcImg,
                             attrs = {
                                 style {
                                     width(100.percent)
@@ -76,8 +77,7 @@ fun resultPage(onClickBack: () -> Unit) {
                                 }
                             ) {
                                 Text(
-                                    "どんなインシデントが起きても動じず冷静に対処できる。\n" +
-                                            "そんなあなたは\n\n"
+                                    diagnosis.preText + "\n" + "そんなあなたは\n\n"
                                 )
                                 Span(
                                     attrs = {
@@ -87,12 +87,10 @@ fun resultPage(onClickBack: () -> Unit) {
                                         }
                                     }
                                 ) {
-                                    Text("「ハシビロコウ」")
+                                    Text("「${diagnosis.typeText}」")
                                 }
                                 Text(
-                                    "タイプ\n\n狙った獲物が、現れるまで、数時間も動きを止めることができるトリで、その動じない姿はまさに頼れるシニアなエンジニア。\n" +
-                                            "\n" +
-                                            "関東では、上野動物園、千葉市動物公園で見ることができます。"
+                                    diagnosis.mainText
                                 )
                             }
                             xShareButton()
@@ -122,7 +120,7 @@ fun resultPage(onClickBack: () -> Unit) {
                         }
                     }
                 ) {
-                    Text("動じないエンジニア大募集！")
+                    Text(diagnosis.postText)
                 }
                 A(
                     href = "https://example.com",

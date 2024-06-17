@@ -5,6 +5,10 @@ import androidx.compose.runtime.setValue
 import components.pages.quizPage
 import components.pages.resultPage
 import components.pages.topPage
+import core.ComposeQuiz
+import core.ComposeResult
+import core.Quiz
+import core.Result
 import org.jetbrains.compose.web.renderComposable
 
 enum class Page {
@@ -15,7 +19,10 @@ enum class Page {
 
 fun main() {
     renderComposable(rootElementId = "root") {
+        var resultId by remember { mutableStateOf(0) }
         var currentPage by remember { mutableStateOf(Page.TOP) }
+        val quiz: Quiz by remember { mutableStateOf(ComposeQuiz()) }
+        val result: Result by remember { mutableStateOf(ComposeResult()) }
 
         when (currentPage) {
             Page.TOP -> topPage(
@@ -23,11 +30,20 @@ fun main() {
             )
 
             Page.QUIZ -> quizPage(
-                onClickFinish = { currentPage = Page.RESULT }
+                quiz = quiz,
+                onClickFinish = { nextId: Int ->
+                    resultId = nextId
+                    currentPage = Page.RESULT
+                }
             )
 
             Page.RESULT -> resultPage(
-                onClickBack = { currentPage = Page.TOP }
+                diagnosis = result.getDiagnosis(resultId),
+                onClickBack = {
+                    quiz.reset()
+                    resultId = 0
+                    currentPage = Page.TOP
+                }
             )
         }
 
