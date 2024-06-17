@@ -45,8 +45,8 @@ class ComposeQuiz : Quiz {
             ),
         ),
     )
-    override var currentQuizId: MutableState<Int> = mutableStateOf(0)
-    override var currentQuizNumber: MutableState<Int> = mutableStateOf(1)
+    override val currentQuizId: MutableState<Int> = mutableStateOf(0)
+    override val currentQuizNumber: MutableState<Int> = mutableStateOf(1)
 
     override fun onClickNext(answerOption: AnswerOption, onClickFinish: (nextId: Int) -> Unit) {
         if (answerOption.isFinish) {
