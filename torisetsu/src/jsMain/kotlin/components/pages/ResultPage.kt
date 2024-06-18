@@ -9,8 +9,8 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun resultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
-    pageLayout {
+fun ResultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
+    PageLayout {
         Div(
             attrs = {
                 style {
@@ -23,7 +23,7 @@ fun resultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
             },
         ) {
             Section {
-                card {
+                Card {
                     Div(
                         attrs = {
                             style {
@@ -93,7 +93,7 @@ fun resultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
                                     diagnosis.mainText
                                 )
                             }
-                            xShareButton()
+                            XShareButton()
                         }
                     }
                 }
@@ -146,7 +146,7 @@ fun resultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
                 }
 
             }
-            button(
+            Button(
                 onClick = onClickBack,
                 size = ButtonSize.NORMAL
             ) {

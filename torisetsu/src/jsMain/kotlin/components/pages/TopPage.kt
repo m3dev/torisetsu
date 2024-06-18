@@ -2,12 +2,12 @@ package components.pages
 
 import androidx.compose.runtime.Composable
 import components.base.ButtonSize
-import components.base.button
+import components.base.Button
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun topPage(
+fun TopPage(
     onClickStart: () -> Unit
 ) {
     Div(
@@ -84,7 +84,7 @@ fun topPage(
             }
 
         ) {
-            button(
+            Button(
                 onClick = { onClickStart() },
                 size = ButtonSize.LARGE
             ) {

@@ -5,7 +5,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 
 @Composable
-fun card(
+fun Card(
     content: @Composable() () -> Unit
 ) {
     Div(

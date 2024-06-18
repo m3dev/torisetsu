@@ -6,7 +6,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Img
 
 @Composable
-fun pageLayout(
+fun PageLayout(
     content: @Composable() () -> Unit
 ) {
     return Div(

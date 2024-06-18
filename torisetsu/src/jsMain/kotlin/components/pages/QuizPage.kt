@@ -1,9 +1,8 @@
 package components.pages
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.setValue
-import components.base.card
-import components.base.pageLayout
+import components.base.Card
+import components.base.PageLayout
 import core.Quiz
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Button
@@ -11,11 +10,11 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun quizPage(
+fun QuizPage(
     quiz: Quiz,
     onClickFinish: (nextId: Int) -> Unit,
 ) {
-    pageLayout {
+    PageLayout {
         Div(
             attrs = {
                 style {
@@ -69,7 +68,7 @@ fun quizPage(
                         }
                     },
                 ) {
-                    card {
+                    Card {
                         Div(
                             attrs = {
                                 style {

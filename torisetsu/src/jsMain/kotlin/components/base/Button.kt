@@ -10,7 +10,7 @@ enum class ButtonSize {
 }
 
 @Composable
-fun button(
+fun Button(
     onClick: () -> Unit,
     size: ButtonSize,
     content: @Composable () -> Unit,

@@ -10,7 +10,7 @@ import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun xShareButton() {
+fun XShareButton() {
     A(
         href = "https://twitter.com/intent/tweet?text=私のトリタイプはハシビロコウです！&url=https://example.com&hashtags=トリタイプ診断",
         attrs = {
