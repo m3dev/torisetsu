@@ -34,8 +34,6 @@ object ButtonStyle : StyleSheet(GlobalStyle) {
             }
         }
 
-
-
         backgroundImage("linear-gradient(#5772FF, #0054DD)")
         color(Color.white)
         fontWeight(700)

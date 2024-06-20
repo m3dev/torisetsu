@@ -72,4 +72,24 @@ fun TopPage(
             }
         }
     }
+
+    Div(
+        attrs = { classes(TopPageStyle.overlayBirds) }
+    ) {
+        Img(
+            src = "images/tori_left.png",
+            alt = "birds",
+            attrs = { classes(TopPageStyle.leftBirds) }
+        )
+        Img(
+            src = "images/tori_right.png",
+            alt = "birds",
+            attrs = { classes(TopPageStyle.rightBirds) }
+        )
+        Img(
+            src = "images/tori_center.png",
+            alt = "birds",
+            attrs = { classes(TopPageStyle.centerBirds) }
+        )
+    }
 }
