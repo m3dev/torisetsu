@@ -1,69 +1,36 @@
 package components.base
 
 import androidx.compose.runtime.Composable
-import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Img
+import org.jetbrains.compose.web.dom.Main
 
 @Composable
 fun PageLayout(
     content: @Composable() () -> Unit
 ) {
     return Div(
-        attrs = {
-            style {
-                padding(32.px, 12.px)
-                display(DisplayStyle.Flex)
-                flexDirection(FlexDirection.Column)
-                alignItems(AlignItems.Center)
-            }
-        }
+        attrs = { classes(PageLayoutStyle.rootElm) }
     ) {
         Div(
-            attrs = {
-                style {
-                    width(649.px)
-                    maxWidth(100.percent)
-                    display(DisplayStyle.Flex)
-                    alignItems(AlignItems.Center)
-                    flexDirection(FlexDirection.Column)
-                }
-            }
+            attrs = { classes(PageLayoutStyle.wrapper) }
         ) {
             Div(
-                attrs = {
-                    style {
-                        display(DisplayStyle.Flex)
-                        flexDirection(FlexDirection.Row)
-                        gap(60.px)
-                    }
-                }
+                attrs = { classes(PageLayoutStyle.header) }
             ) {
                 Img(
                     src = "./images/service_logo.svg",
                     alt = "エンジニア トリ診断",
-                    attrs = {
-                        style {
-                            width(150.px)
-                        }
-                    }
+                    attrs = { classes(PageLayoutStyle.titleLogo) }
                 )
                 Img(
                     src = "./images/m3_logo_en.svg",
                     alt = "M3 Inc.",
-                    attrs = {
-                        style {
-                            width(160.px)
-                        }
-                    })
+                    attrs = { classes(PageLayoutStyle.m3Logo) }
+                )
             }
-            Div(
-                attrs = {
-                    style {
-                        marginTop(40.px)
-                        width(100.percent)
-                    }
-                }
+            Main(
+                attrs = { classes(PageLayoutStyle.main) }
             ) {
                 content()
             }
