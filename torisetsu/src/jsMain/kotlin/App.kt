@@ -10,7 +10,7 @@ import core.Result
 @Composable
 fun App() {
     var resultId by remember { mutableStateOf(0) }
-    var currentPage by remember { mutableStateOf(Page.RESULT) }
+    var currentPage by remember { mutableStateOf(Page.TOP) }
     val quiz: Quiz by remember { mutableStateOf(ComposeQuiz()) }
     val result: Result by remember { mutableStateOf(ComposeResult()) }
 
