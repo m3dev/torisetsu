@@ -11,16 +11,24 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    // aoitori
     copy {
         from("src/jsMain/resources/base.html")
         into("src/jsMain/resources/aoitori/")
-        expand(mapOf("scriptPath" to ".."))
+        expand(mapOf(
+            "scriptPath" to "..",
+            "ogpImageName" to "aoitori.png"
+        ))
         rename("base", "index")
     }
+    // main
     copy {
         from("src/jsMain/resources/base.html")
         into("src/jsMain/resources/")
-        expand(mapOf("scriptPath" to "."))
+        expand(mapOf(
+            "scriptPath" to "..",
+            "ogpImageName" to "banner.png"
+        ))
         rename("base", "index")
     }
 }
