@@ -29,8 +29,5 @@ fun <TBuilder> GenericStyleSheetBuilder<TBuilder>.dataAttr(
 }
 
 fun CSSBuilder.data(selector: String, value: String, builder: CSSBuilder.() -> Unit) {
-//    (self + attrEquals(selector, value, true)) style {
-//        builder()
-//    }
     dataAttr(selector, value, self, builder)
 }
