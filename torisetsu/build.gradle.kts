@@ -11,8 +11,19 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    copy {
+        from("src/jsMain/resources/base.html")
+        into("src/jsMain/resources/aoitori/")
+        expand(mapOf("scriptPath" to ".."))
+        rename("base", "index")
+    }
+    copy {
+        from("src/jsMain/resources/base.html")
+        into("src/jsMain/resources/")
+        expand(mapOf("scriptPath" to "."))
+        rename("base", "index")
+    }
 }
-
 
 kotlin {
     js(IR) {
