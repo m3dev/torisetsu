@@ -11,24 +11,6 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    // aoitori
-    copy {
-        from("src/jsMain/resources/base.html")
-        into("src/jsMain/resources/")
-        expand(mapOf(
-            "ogpImageName" to "aoitori.png"
-        ))
-        rename("base", "aoitori")
-    }
-    // main
-    copy {
-        from("src/jsMain/resources/base.html")
-        into("src/jsMain/resources/")
-        expand(mapOf(
-            "ogpImageName" to "banner.png"
-        ))
-        rename("base", "index")
-    }
 }
 
 kotlin {
@@ -59,3 +41,21 @@ kotlin {
     }
 }
 
+tasks.register<Copy>("copyStaticPages") {
+    listOf(
+        "aoitori" to "aoitori",
+        "index" to "banner",
+    ).forEach { (fileName, imageName) ->
+        from("src/jsMain/resources/base.html") {
+            expand(
+                mapOf(
+                    "ogpImageName" to "$imageName.png"
+                )
+            )
+            rename("base", fileName)
+        }
+    }
+    into("src/jsMain/resources/")
+}
+
+tasks["jsProcessResources"].dependsOn("copyStaticPages")
