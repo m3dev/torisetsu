@@ -18,7 +18,7 @@ fun XShareButton() {
         }
     ) {
         Img(
-            src = "/icons/x_icon.svg",
+            src = "./images/x_icon.svg",
             attrs = { classes(XShareButtonStyle.icon) }
         )
         Div(

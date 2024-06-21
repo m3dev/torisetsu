@@ -43,7 +43,7 @@ fun TopPage(
                             Text("by")
                         }
                         Img(
-                            src = "images/m3_logo_en.svg",
+                            src = "./images/m3_logo_en.svg",
                             alt = "M3, Inc.",
                         )
                     }
@@ -78,17 +78,17 @@ fun TopPage(
     ) {
         Div(attrs = { classes(TopPageStyle.leftBirdsWrapper) }) {
             Img(
-                src = "images/tori_left_2.png",
+                src = "./images/tori_left_2.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.leftBirds) }
             )
             Img(
-                src = "images/tori1.png",
+                src = "./images/tori1.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.leftBird1) }
             )
             Img(
-                src = "images/tori3.png",
+                src = "./images/tori3.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.leftBird3) }
             )
@@ -96,23 +96,23 @@ fun TopPage(
         }
         Div(attrs = { classes(TopPageStyle.rightBirdsWrapper) }) {
             Img(
-                src = "images/tori_right_2.png",
+                src = "./images/tori_right_2.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.rightBirds) }
             )
             Img(
-                src = "images/tori13.png",
+                src = "./images/tori13.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.rightBird13) }
             )
             Img(
-                src = "images/tori15.png",
+                src = "./images/tori15.png",
                 alt = "",
                 attrs = { classes(TopPageStyle.rightBird15) }
             )
         }
         Img(
-            src = "images/tori_center.png",
+            src = "./images/tori_center.png",
             alt = "",
             attrs = { classes(TopPageStyle.centerBirds) }
         )
