@@ -30,7 +30,11 @@ fun App() {
             diagnosis = result.getDiagnosis(window.location.pathname),
             onClickBack = {
                 quiz.reset()
-                window.location.href = "/torisetsu/"
+                if (window.location.href.contains("torisetsu")) {
+                    window.location.href = "/torisetsu/"
+                } else {
+                    window.location.href = "/"
+                }
             }
         )
     }
