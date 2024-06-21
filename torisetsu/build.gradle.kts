@@ -53,7 +53,7 @@ tasks.register<Copy>("copyStaticPages") {
         "hayabusa" to "hayabusa",
         "hashibirokou" to "hashibirokou",
         "hashibirokou_sr" to "hashibirokou_sr",
-        "index" to "aoitori",
+        "index" to "index",
     ).forEach { (fileName, imageName) ->
         from("src/jsMain/resources/base.html") {
             expand(
