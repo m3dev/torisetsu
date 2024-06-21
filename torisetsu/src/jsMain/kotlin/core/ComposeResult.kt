@@ -7,38 +7,36 @@ class ComposeResult() : Result {
     private val diagnosisMap: Map<String, Diagnosis> = mapOf(
         "aoitori" to
                 Diagnosis(
-            typeText = "アオイトリ",
-            srcImg = "./images/aoitori.png",
-            preText = "SNSでつぶやかずにはいられない",
-            mainText = "Xに変わってしまったけど、根強いファンの残る、あのアオイトリ。「ハチドリ」と「ムジルリツグミ」をモデルにデザインされているそうです。\n\nもはや運命であり人生。\nXでシェアを必ずしてください。",
-            postText = "ネット大好きエンジニア大募集！",
-        ),
-
+                    typeText = "アオイトリ",
+                    srcImg = "./images/aoitori.png",
+                    preText = "SNSでつぶやかずにはいられない",
+                    mainText = "Xに変わってしまったけど、根強いファンの残る、あのアオイトリ。「ハチドリ」と「ムジルリツグミ」をモデルにデザインされているそうです。\n\nもはや運命であり人生。\nXでシェアを必ずしてください。",
+                    postText = "ネット大好きエンジニア大募集！",
+                ),
         "swift_2" to
                 Diagnosis(
-            typeText = "ツバメ",
-            srcImg = "./images/swift_2.png",
-            preText = "圧倒的加速度！生粋のSwift使いかもしれない",
-            mainText = "ツバメのような素早い動きで、開発を加速させます！\n\nちなみに、日本で見かけるツバメはスズメ目で、ありSwiftのモデルになったとされるトリはアマツバメ目で違う仲間なんです。このイラストはスズメ目の方ですね！",
-            postText = "圧倒的加速で成長したいエンジニア大募集！",
-        ),
-
+                    typeText = "ツバメ",
+                    srcImg = "./images/swift_2.png",
+                    preText = "圧倒的加速度！生粋のSwift使いかもしれない",
+                    mainText = "ツバメのような素早い動きで、開発を加速させます！\n\nちなみに、日本で見かけるツバメはスズメ目で、ありSwiftのモデルになったとされるトリはアマツバメ目で違う仲間なんです。このイラストはスズメ目の方ですね！",
+                    postText = "圧倒的加速で成長したいエンジニア大募集！",
+                ),
         "swift_1" to
                 Diagnosis(
-            typeText = "ハチドリ",
-            srcImg = "./images/swift_1.png",
-            preText = "Dart/Flutter使いか！？",
-            mainText = "毎秒約55回、最高で約80回高速ではばたき、空中で静止するホバリング飛翔を行いブンブンと飛び回ります。\n\n小型の愛くるしさと高速に飛び回る姿から、ハチドリは様々なプロダクトやプログラミング言語のロゴのモデルにされています。",
-            postText = "医療業界を飛び回るエンジニア大募集",
-        ),
+                    typeText = "ハチドリ",
+                    srcImg = "./images/swift_1.png",
+                    preText = "Dart/Flutter使いか！？",
+                    mainText = "毎秒約55回、最高で約80回高速ではばたき、空中で静止するホバリング飛翔を行いブンブンと飛び回ります。\n\n小型の愛くるしさと高速に飛び回る姿から、ハチドリは様々なプロダクトやプログラミング言語のロゴのモデルにされています。",
+                    postText = "医療業界を飛び回るエンジニア大募集",
+                ),
         "penguin" to
                 Diagnosis(
-            typeText = "ペンギン",
-            srcImg = "./images/penguin.png",
-            preText = "好奇心旺盛！何にでも突っ込むファーストペンギン",
-            mainText = "ペンギンといえばLinuxのTuxくん。Wikipediaの充実度が凄いので是非見て欲しいところです！\n\nファーストペンギンの方は、最初に飛び込むのは自らではなく集団に押されて。しかも危険度はかなり高く、その殆どが食べられてしまうというがあなたは果たして…",
-            postText = "先行者利益を取りに行くエンジニア大募集！",
-        ),
+                    typeText = "ペンギン",
+                    srcImg = "./images/penguin.png",
+                    preText = "好奇心旺盛！何にでも突っ込むファーストペンギン",
+                    mainText = "ペンギンといえばLinuxのTuxくん。Wikipediaの充実度が凄いので是非見て欲しいところです！\n\nファーストペンギンの方は、最初に飛び込むのは自らではなく集団に押されて。しかも危険度はかなり高く、その殆どが食べられてしまうというがあなたは果たして…",
+                    postText = "先行者利益を取りに行くエンジニア大募集！",
+                ),
         "kakabo" to
                 Diagnosis(
                     typeText = "カカポ",
