@@ -143,7 +143,7 @@ class ComposeQuiz : Quiz {
         ),
         Question(
             id = 13,
-            questionText = "勉強会やカンファレンスの参加は何回目？",
+            questionText = "トリ駄洒落と言えば？",
             answerOptions = listOf(
                 AnswerOption("ペンギンのペン銀ｗｗｗ！", 3, true),
                 AnswerOption("ツバメが椅子にスワローｗｗｗ", 11, false),
@@ -261,7 +261,7 @@ class ComposeQuiz : Quiz {
                 AnswerOption("wasabi", 3, true),
                 AnswerOption("Spring Boot", 20, false),
                 AnswerOption("Ktor", 20, false),
-                AnswerOption("Flutter", 25, true),
+                AnswerOption("Flutter", 1, true),
             ),
         ),
     )
