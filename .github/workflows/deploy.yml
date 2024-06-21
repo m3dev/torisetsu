@@ -19,12 +19,11 @@ jobs:
         run: chmod +x gradlew
       - name: build
         run: |
-          ./gradlew jsBrowserProductionWebpack
-          cp build/kotlin-webpack/js/productionExecutable/* build/processedResources/js/main/
+          ./gradlew build
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: github-pages
-          FOLDER: torisetsu/build/processedResources/js/main
+          FOLDER: torisetsu/build/dist/js/productionExecutable
           CLEAN: true

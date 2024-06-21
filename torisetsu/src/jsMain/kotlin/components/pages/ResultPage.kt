@@ -123,7 +123,7 @@ fun ResultPage(diagnosis: Diagnosis?, onClickBack: () -> Unit) {
                     Text(diagnosis!!.postText)
                 }
                 A(
-                    href = "https://example.com",
+                    href = "https://jobs.m3.com/engineer/",
                     attrs = {
                         target(ATarget.Blank)
                     }

@@ -11,7 +11,7 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun XShareButton() {
     A(
-        href = "https://twitter.com/intent/tweet?text=私のトリタイプはハシビロコウです！&url=https://example.com&hashtags=トリタイプ診断",
+        href = "https://twitter.com/intent/tweet?text=私のトリタイプはハシビロコウです！&url=https://m3dev.github.io/torisetsu&hashtags=トリタイプ診断",
         attrs = {
             target(ATarget.Blank)
             classes(XShareButtonStyle.rootElm)
