@@ -124,11 +124,11 @@ class ComposeQuiz : Quiz {
         ),
         Question(
             id = 11,
-            questionText = "このコードの実行結果は？\nprintln(\"-\"?.let{null}?:\"_\")",
+            questionText = "このコードの実行結果は？\n\nprintln(\"-\"?.let{null}?:\"_\")",
             answerOptions = listOf(
-                AnswerOption("正解", 21, false),
-                AnswerOption("不正解", 10, false),
-                AnswerOption("惜しい！", 18, false),
+                AnswerOption("_", 21, false),
+                AnswerOption("null", 10, false),
+                AnswerOption("-", 18, false),
             ),
         ),
         Question(

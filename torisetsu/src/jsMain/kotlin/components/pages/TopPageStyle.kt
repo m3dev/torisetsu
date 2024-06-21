@@ -1,5 +1,6 @@
 package components.pages
 
+import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
 import style.GlobalStyle
 import style.forMobile
@@ -122,6 +123,13 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         }
     }
 
+    @OptIn(ExperimentalComposeWebApi::class)
+    private val rotationKeyframes by keyframes {
+        each(0.percent) { transform { rotate(0.deg) } }
+        each(10.percent) { transform { rotate(360.deg) } }
+        each(100.percent) { transform { rotate(360.deg) } }
+    }
+
     val leftBirds by style {
         position(Position.Absolute)
         bottom(0.px)
@@ -129,6 +137,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         property("object-fit", "contain")
         property("object-position", "right")
 
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(15.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -145,6 +159,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         property("object-fit", "contain")
         property("object-position", "right")
 
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(5.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -177,6 +197,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         property("object-fit", "contain")
         property("object-position", "right")
 
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(10.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -220,6 +246,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         width(100.percent)
         maxWidth(2000.px)
 
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(25.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -234,7 +266,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
         width(65.percent)
         maxWidth(1000.px)
 
-
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(20.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -258,6 +295,12 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
             }
         }
 
+        animation(rotationKeyframes) {
+            duration(50.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+            delay(30.s)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
@@ -271,6 +314,21 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
                 width(50.percent)
             }
         }
+    }
+
+    @OptIn(ExperimentalComposeWebApi::class)
+    private val vibrateKeyframes by keyframes {
+        each(0.percent) { transform { translateX(-50.percent) } }
+        each(10.percent) { transform { translateX(-49.percent) } }
+        each(20.percent) { transform { translateX(-51.percent) } }
+        each(30.percent) { transform { translateX(-49.percent) } }
+        each(40.percent) { transform { translateX(-51.percent) } }
+        each(50.percent) { transform { translateX(-49.percent) } }
+        each(60.percent) { transform { translateX(-51.percent) } }
+        each(70.percent) { transform { translateX(-49.percent) } }
+        each(80.percent) { transform { translateX(-51.percent) } }
+        each(90.percent) { transform { translateX(-49.percent) } }
+        each(100.percent) { transform { translateX(-50.percent) } }
     }
 
     val centerBirds by style {
@@ -289,6 +347,11 @@ object TopPageStyle : StyleSheet(GlobalStyle) {
             }
         }
 
+        animation(vibrateKeyframes) {
+            duration(20.s)
+            timingFunction(AnimationTimingFunction.Linear)
+            iterationCount(null)
+        }
         media("prefers-reduced-motion") {
             self style {
                 property("animation-name", "none")
