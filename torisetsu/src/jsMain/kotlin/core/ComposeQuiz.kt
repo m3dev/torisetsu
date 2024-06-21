@@ -266,23 +266,23 @@ class ComposeQuiz : Quiz {
         ),
     )
     private val results: List<String> = listOf(
-        "/aoitori.html",
-        "/swift_2.html",
-        "/swift_1.html",
-        "/penguin.html",
-        "/kakapo.html",
-        "/kanaria.html",
-        "/kiwi.html",
-        "/hayabusa.html",
-        "/hashibirokou.html",
-        "/hashibirokou_sr.html",
+        "/torisetsu/aoitori.html",
+        "/torisetsu/swift_2.html",
+        "/torisetsu/swift_1.html",
+        "/torisetsu/penguin.html",
+        "/torisetsu/kakapo.html",
+        "/torisetsu/kanaria.html",
+        "/torisetsu/kiwi.html",
+        "/torisetsu/hayabusa.html",
+        "/torisetsu/hashibirokou.html",
+        "/torisetsu/hashibirokou_sr.html",
     )
     override val currentQuizId: MutableState<Int> = mutableStateOf(0)
     override val currentQuizNumber: MutableState<Int> = mutableStateOf(1)
 
     override fun onClickNext(answerOption: AnswerOption) {
         if (answerOption.isFinish) {
-            window.location.pathname = results[answerOption.nextId]
+            window.location.href = results[answerOption.nextId]
         }
         currentQuizNumber.value += 1
         currentQuizId.value = answerOption.nextId
