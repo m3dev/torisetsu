@@ -14,7 +14,7 @@ fun App() {
     val quiz: Quiz by remember { mutableStateOf(ComposeQuiz()) }
     val result: Result by remember { mutableStateOf(ComposeResult()) }
 
-    if (window.location.pathname in listOf("/", "")) {
+    if (window.location.pathname.replace("/", "") in listOf("torisetsu", "", "index.html")) {
         when (currentPage) {
             Page.TOP -> {
                 TopPage(
@@ -30,7 +30,7 @@ fun App() {
             diagnosis = result.getDiagnosis(window.location.pathname),
             onClickBack = {
                 quiz.reset()
-                window.location.pathname = "/"
+                window.location.href = "/torisetsu/"
             }
         )
     }
