@@ -47,7 +47,7 @@ tasks.register<Copy>("copyStaticPages") {
         "swift_2" to "swift_2",
         "swift_1" to "swift_1",
         "penguin" to "penguin",
-        "kakabo" to "kakabo",
+        "kakapo" to "kakapo",
         "kanaria" to "kanaria",
         "kiwi" to "kiwi",
         "hayabusa" to "hayabusa",

@@ -16,7 +16,7 @@ class ComposeQuiz : Quiz {
                 AnswerOption("インターネットから！", 1, false),
                 AnswerOption("コードから！", 2, false),
                 AnswerOption("本から！", 3, false),
-                AnswerOption("オフラインから！", 3, false),
+                AnswerOption("オフラインから！", 4, false),
             ),
         ),
         Question(
@@ -233,7 +233,7 @@ class ComposeQuiz : Quiz {
                 AnswerOption("コルーチン", 7, true),
                 AnswerOption("RxKotlin", 7, true),
                 AnswerOption("JavaのFutureやCompletableFuture", 7, true),
-                AnswerOption("C言語なのに", 7, true),
+                AnswerOption("その他", 7, true),
             ),
         ),
         Question(
@@ -242,7 +242,7 @@ class ComposeQuiz : Quiz {
             answerOptions = listOf(
                 AnswerOption("時が過ぎるまで待つ", 24, false),
                 AnswerOption("気分転換する", 8, true),
-                AnswerOption("相談する", 11, false),
+                AnswerOption("相談する", 10, false),
             ),
         ),
         Question(
@@ -270,7 +270,7 @@ class ComposeQuiz : Quiz {
         "/swift_2.html",
         "/swift_1.html",
         "/penguin.html",
-        "/kakabo.html",
+        "/kakapo.html",
         "/kanaria.html",
         "/kiwi.html",
         "/hayabusa.html",
