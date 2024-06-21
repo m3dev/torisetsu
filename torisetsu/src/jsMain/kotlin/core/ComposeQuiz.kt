@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.MutableState
 import data.AnswerOption
 import data.Question
+import kotlinx.browser.window
 
 class ComposeQuiz : Quiz {
     // TODO: Load file
@@ -45,12 +46,18 @@ class ComposeQuiz : Quiz {
             ),
         ),
     )
+    private val results: List<String> = listOf(
+        "/aoitori.html",
+        "/aoitori.html",
+        "/aoitori.html",
+        "/aoitori.html"
+    )
     override val currentQuizId: MutableState<Int> = mutableStateOf(0)
     override val currentQuizNumber: MutableState<Int> = mutableStateOf(1)
 
-    override fun onClickNext(answerOption: AnswerOption, onClickFinish: (nextId: Int) -> Unit) {
+    override fun onClickNext(answerOption: AnswerOption) {
         if (answerOption.isFinish) {
-            onClickFinish(answerOption.nextId)
+            window.location.pathname = results[answerOption.nextId]
         }
         currentQuizNumber.value += 1
         currentQuizId.value = answerOption.nextId
