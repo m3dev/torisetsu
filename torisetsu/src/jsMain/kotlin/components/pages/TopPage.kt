@@ -1,8 +1,8 @@
 package components.pages
 
 import androidx.compose.runtime.Composable
-import components.base.ButtonSize
 import components.base.Button
+import components.base.ButtonSize
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
@@ -70,7 +70,7 @@ fun TopPage(
                     }
                     Img(
                         src = "images/m3_logo_en.svg",
-                        alt = "M3 Inc.",
+                        alt = "M3, Inc.",
                     )
 
                 }
