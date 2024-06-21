@@ -6,35 +6,33 @@ import core.ComposeQuiz
 import core.ComposeResult
 import core.Quiz
 import core.Result
+import kotlinx.browser.window
 
 @Composable
 fun App() {
-    var resultId by remember { mutableStateOf(0) }
     var currentPage by remember { mutableStateOf(Page.TOP) }
     val quiz: Quiz by remember { mutableStateOf(ComposeQuiz()) }
     val result: Result by remember { mutableStateOf(ComposeResult()) }
 
-
-    when (currentPage) {
-        Page.TOP -> TopPage(
-            onClickStart = { currentPage = Page.QUIZ }
-        )
-
-        Page.QUIZ -> QuizPage(
-            quiz = quiz,
-            onClickFinish = { nextId: Int ->
-                resultId = nextId
-                currentPage = Page.RESULT
+    if (window.location.pathname in listOf("/", "")) {
+        when (currentPage) {
+            Page.TOP -> {
+                TopPage(
+                    onClickStart = { currentPage = Page.QUIZ }
+                )
             }
-        )
-
-        Page.RESULT -> ResultPage(
-            diagnosis = result.getDiagnosis(resultId),
+            Page.QUIZ -> {
+                QuizPage(quiz = quiz)
+            }
+        }
+    } else {
+        ResultPage(
+            diagnosis = result.getDiagnosis(window.location.pathname),
             onClickBack = {
                 quiz.reset()
-                resultId = 0
-                currentPage = Page.TOP
+                window.location.pathname = "/"
             }
         )
     }
+
 }

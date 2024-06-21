@@ -4,8 +4,7 @@ import style.GlobalStyle
 
 enum class Page {
     TOP,
-    QUIZ,
-    RESULT
+    QUIZ
 }
 
 fun main() {

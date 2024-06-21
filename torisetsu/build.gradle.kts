@@ -13,7 +13,6 @@ repositories {
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
-
 kotlin {
     js(IR) {
         browser {
@@ -42,3 +41,21 @@ kotlin {
     }
 }
 
+tasks.register<Copy>("copyStaticPages") {
+    listOf(
+        "aoitori" to "aoitori",
+        "index" to "banner",
+    ).forEach { (fileName, imageName) ->
+        from("src/jsMain/resources/base.html") {
+            expand(
+                mapOf(
+                    "ogpImageName" to "$imageName.png"
+                )
+            )
+            rename("base", fileName)
+        }
+    }
+    into("src/jsMain/resources/")
+}
+
+tasks["jsProcessResources"].dependsOn("copyStaticPages")

@@ -5,3 +5,7 @@
 build/
 local.properties
 kotlin-js-store/yarn.lock
+
+# generated from base.html
+src/jsMain/resources/*.html
+!src/jsMain/resources/base.html
