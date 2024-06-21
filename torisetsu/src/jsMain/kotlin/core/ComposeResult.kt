@@ -90,6 +90,6 @@ class ComposeResult() : Result {
     )
 
     override fun getDiagnosis(resultPathName: String): Diagnosis? {
-        return diagnosisMap.get(resultPathName.replace("/", "").replace(".html", ""))
+        return diagnosisMap[resultPathName.split("/").dropLastWhile { it.isEmpty() }.last().replace(".html", "")]
     }
 }
