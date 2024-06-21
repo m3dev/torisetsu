@@ -211,7 +211,7 @@ class ComposeQuiz : Quiz {
             answerOptions = listOf(
                 AnswerOption("アプリ開発したよ", 2, true),
                 AnswerOption("独学だよ", 6, true),
-                AnswerOption("C言語なのに", 6, true),
+                AnswerOption("C言語だね", 6, true),
                 AnswerOption("大学の授業でやったよ", 6, true),
                 AnswerOption("その他", 5, true),
             ),
