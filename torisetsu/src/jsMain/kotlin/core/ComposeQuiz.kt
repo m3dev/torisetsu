@@ -267,9 +267,15 @@ class ComposeQuiz : Quiz {
     )
     private val results: List<String> = listOf(
         "/aoitori.html",
-        "/aoitori.html",
-        "/aoitori.html",
-        "/aoitori.html"
+        "/swift_2.html",
+        "/swift_1.html",
+        "/penguin.html",
+        "/kakabo.html",
+        "/kanaria.html",
+        "/kiwi.html",
+        "/hayabusa.html",
+        "/hashibirokou.html",
+        "/hashibirokou_sr.html",
     )
     override val currentQuizId: MutableState<Int> = mutableStateOf(0)
     override val currentQuizNumber: MutableState<Int> = mutableStateOf(1)

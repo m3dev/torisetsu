@@ -87,7 +87,7 @@ fun ResultPage(diagnosis: Diagnosis?, onClickBack: () -> Unit) {
                                         }
                                     }
                                 ) {
-                                    Text("「${diagnosis.typeText}」")
+                                    Text("「${diagnosis.typeText}」タイプ！\n\n")
                                 }
                                 Text(
                                     diagnosis.mainText

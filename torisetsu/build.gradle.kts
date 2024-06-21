@@ -44,6 +44,15 @@ kotlin {
 tasks.register<Copy>("copyStaticPages") {
     listOf(
         "aoitori" to "aoitori",
+        "swift_2" to "swift_2",
+        "swift_1" to "swift_1",
+        "penguin" to "penguin",
+        "kakabo" to "kakabo",
+        "kanaria" to "kanaria",
+        "kiwi" to "kiwi",
+        "hayabusa" to "hayabusa",
+        "hashibirokou" to "hashibirokou",
+        "hashibirokou_sr" to "hashibirokou_sr",
         "index" to "banner",
     ).forEach { (fileName, imageName) ->
         from("src/jsMain/resources/base.html") {
