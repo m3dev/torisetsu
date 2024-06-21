@@ -9,7 +9,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun ResultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
+fun ResultPage(diagnosis: Diagnosis?, onClickBack: () -> Unit) {
     PageLayout {
         Div(
             attrs = {
@@ -50,7 +50,7 @@ fun ResultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
                             }
                         }
                         Img(
-                            src = diagnosis.srcImg,
+                            src = diagnosis!!.srcImg,
                             attrs = {
                                 style {
                                     width(100.percent)
@@ -120,7 +120,7 @@ fun ResultPage(diagnosis: Diagnosis, onClickBack: () -> Unit) {
                         }
                     }
                 ) {
-                    Text(diagnosis.postText)
+                    Text(diagnosis!!.postText)
                 }
                 A(
                     href = "https://example.com",

@@ -11,8 +11,7 @@ import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun QuizPage(
-    quiz: Quiz,
-    onClickFinish: (nextId: Int) -> Unit,
+    quiz: Quiz
 ) {
     PageLayout {
         Div(
@@ -64,7 +63,7 @@ fun QuizPage(
                 Button(
                     attrs = {
                         onClick {
-                            quiz.onClickNext(opt, onClickFinish)
+                            quiz.onClickNext(opt)
                         }
                     },
                 ) {

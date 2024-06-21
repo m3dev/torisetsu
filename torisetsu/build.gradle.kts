@@ -14,19 +14,17 @@ repositories {
     // aoitori
     copy {
         from("src/jsMain/resources/base.html")
-        into("src/jsMain/resources/aoitori/")
+        into("src/jsMain/resources/")
         expand(mapOf(
-            "scriptPath" to "..",
             "ogpImageName" to "aoitori.png"
         ))
-        rename("base", "index")
+        rename("base", "aoitori")
     }
     // main
     copy {
         from("src/jsMain/resources/base.html")
         into("src/jsMain/resources/")
         expand(mapOf(
-            "scriptPath" to "..",
             "ogpImageName" to "banner.png"
         ))
         rename("base", "index")
