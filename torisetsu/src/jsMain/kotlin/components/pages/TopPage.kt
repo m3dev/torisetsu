@@ -76,19 +76,44 @@ fun TopPage(
     Div(
         attrs = { classes(TopPageStyle.overlayBirds) }
     ) {
-        Img(
-            src = "images/tori_left.png",
-            alt = "birds",
-            attrs = { classes(TopPageStyle.leftBirds) }
-        )
-        Img(
-            src = "images/tori_right.png",
-            alt = "birds",
-            attrs = { classes(TopPageStyle.rightBirds) }
-        )
+        Div(attrs = { classes(TopPageStyle.leftBirdsWrapper) }) {
+            Img(
+                src = "images/tori_left_2.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.leftBirds) }
+            )
+            Img(
+                src = "images/tori1.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.leftBird1) }
+            )
+            Img(
+                src = "images/tori3.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.leftBird3) }
+            )
+
+        }
+        Div(attrs = { classes(TopPageStyle.rightBirdsWrapper) }) {
+            Img(
+                src = "images/tori_right_2.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.rightBirds) }
+            )
+            Img(
+                src = "images/tori13.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.rightBird13) }
+            )
+            Img(
+                src = "images/tori15.png",
+                alt = "",
+                attrs = { classes(TopPageStyle.rightBird15) }
+            )
+        }
         Img(
             src = "images/tori_center.png",
-            alt = "birds",
+            alt = "",
             attrs = { classes(TopPageStyle.centerBirds) }
         )
     }
