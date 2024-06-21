@@ -44,7 +44,7 @@ fun TopPage(
                         }
                         Img(
                             src = "images/m3_logo_en.svg",
-                            alt = "M3 Inc.",
+                            alt = "M3, Inc.",
                         )
                     }
 
