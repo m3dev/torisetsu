@@ -126,7 +126,7 @@ class ComposeQuiz : Quiz {
             id = 11,
             questionText = "このコードの実行結果は？\n\nprintln(\"-\"?.let{null}?:\"_\")",
             answerOptions = listOf(
-                AnswerOption("_", 21, false),
+                AnswerOption("_", 24, false),
                 AnswerOption("null", 10, false),
                 AnswerOption("-", 18, false),
             ),
